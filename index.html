@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.5/purify.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row m-4 ">
+      <div class="col text-center ">
+      <h1 class="text-primary display-4 fw-normal">Expense Tracker <button id="dark-mode-toggle" class="btn">
+        <i class="bi bi-moon"></i> 
+      </button>
+      </h1>  
+      <p class="fs-5 text-muted">Track Your Expenses Below</p>
+    </div>
+    </div>
+  </div>
+  <main>
+    <div class="container">
+      <form id="expense-form" class="p-4 m-4 row shadow-sm rounded-3 border border-primary">
+        <div class="form-group col-md-4 my-2">
+          <label for="name">Expense Description</label>
+          <input type="text" required autocomplete="off" id="description" class="form-control" placeholder="">
+        </div>
+        <div class="form-group col-md-4 my-2">
+          <label for="amount">Amount</label>
+          <input type="number" required step="0.01" autocomplete="off" id="amount" class="form-control" placeholder="">
+        </div>
+        <div class="form-group col-md-4 my-2">
+          <label for="date">Date</label>
+          <input type="date" required id="date" class="form-control">
+        </div>
+        <div class="form-group mt-4">
+          <input type="submit" value="Add Expense" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+    <div class="container">
+      <div class="row m-4 border-bottom border-3 border-primary">
+        <p class="h3 text-primary">Expense List</p>
+      </div>
+      <div class="row row-cols-1 row-cols-md-3 mx-3 my-6 text-center" id="expense-container">
+      </div>
+    </div>
+
+    <footer class="text-center text-white" style="width: 100%; position: fixed; bottom: 0;">
+      <div class="text-center text-dark text-primary p-3" style="background-color: whitesmoke; width: 100%;">
+        © 2023 "How can I lose when I came here with nothing" -
+        <a class="text-dark" href="https://github.com/Priest-tz"> Dara</a>
+      </div>
+    </footer>
+  </main>
+  <style>
+    .dark-mode {
+      background-color: #121212; 
+      color: #ffffff; 
+    }
+    .dark-mode .card-header {
+      background-color: #1e1e1e; 
+      border-color: #292b2c; 
+    }
+    .dark-mode .card-body {
+      background-color: #1e1e1e;
+      color: #ffffff; 
+    }
+  </style>
+
+  <script src="./app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
